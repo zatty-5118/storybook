@@ -38,10 +38,10 @@ jobs:
         run: npm ci
       
       - name: Check Storybook CLI version
-        run: ./node_modules/.bin/storybook --version
+        run: npx storybook@9 --version
 
       - name: Build Storybook
-        run: ./node_modules/.bin/storybook build --output-dir storybook-static --prefix-paths
+        run: npm run build-storybook
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
