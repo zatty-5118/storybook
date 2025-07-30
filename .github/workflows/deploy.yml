@@ -36,6 +36,9 @@ jobs:
 
       - name: Install dependencies
         run: npm ci
+      
+      - name: Check Storybook CLI version
+        run: npx storybook --version
 
       - name: Build Storybook
         run: npm run build-storybook
