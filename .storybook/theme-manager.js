@@ -1,4 +1,5 @@
 import { create } from 'storybook/theming';
+import storybookLogo from "/public/images/logo/logo.svg";
 
 export default create({
   base: "light",
@@ -9,8 +10,8 @@ export default create({
 
   // 左上のStorybookのロゴが入っていたエリア
   brandTitle: "zatty's Storybook",
-  brandUrl: 'https://example.com',
-  brandImage: "../public/images/logo/logo.svg",
+  brandUrl: "https://zatty-5118.github.io/stroybook/",
+  brandImage: storybookLogo,
   brandTarget: '_self',
 
   // カラー

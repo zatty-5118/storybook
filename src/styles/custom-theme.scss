@@ -1,6 +1,3 @@
-@import './vendor/reset.scss';
-@import './mixin/mixin';
-
 #storybook-docs,
 .sbdocs-wrapper,
 .sbdocs.sbdocs-content,
@@ -11,19 +8,19 @@
 
 div {
     &[role="combobox"] {
-        box-shadow: cl(cl-sb-primary-dark) 0px 0px 0px 1px inset;
+        box-shadow: #B18A8B 0px 0px 0px 1px inset;
     }
 
     &#storybook-panel-root {
         & #panel-tab-content {
             span {
-                color: cl(cl-base) !important;
+                color: #ffffff !important;
             }
 
             label {
                 &[aria-disabled]{
                     span {
-                        color: cl(cl-text) !important;
+                        color: #333333 !important;
                     }
                 }                
             }
@@ -35,35 +32,23 @@ button {
     &[aria-label="Create a new story"] {
         display: none;
         background: inherit;
-        box-shadow: cl(cl-sb-primary-dark) 0px 0px 0px 1px inset;
+        box-shadow: #B18A8B 0px 0px 0px 1px inset;
 
         &:hover {
-            background: cl(cl-sb-primary);
+            background: #d5c2c2;
         }
     }
 }
 
-// input {
-//     &[type="radio"] {
-//         &:checked{
-//             accent-color: cl(cl-sb-primary-dark);
-//         }
-        
-//         &:not(:checked){
-//             accent-color: cl(cl-base);
-//         }
-//     }
-// }
-
 .sidebar-item {
     &:hover,
     &:focus{
-        background: cl(cl-sb-primary) !important;
+        background: #d5c2c2 !important;
         outline: none;
 
         button{
-            box-shadow: cl(cl-sb-primary) 0px 0px 5px 5px !important;
-            background: cl(cl-sb-primary);
+            box-shadow: #d5c2c2 0px 0px 5px 5px !important;
+            background: #d5c2c2;
         }
     }
 
@@ -73,11 +58,11 @@ button {
                 &[data-nodetype="story"]{
                     &:hover,
                     &:focus{
-                        background: cl(cl-sb-primary) !important;
+                        background: #d5c2c2 !important;
 
                         button{
-                            box-shadow: cl(cl-sb-primary) 0px 0px 5px 5px !important;
-                            background: cl(cl-sb-primary);
+                            box-shadow: #d5c2c2 0px 0px 5px 5px !important;
+                            background: #d5c2c2;
                         }
                     }
                 }
