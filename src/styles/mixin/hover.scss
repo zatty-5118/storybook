@@ -1,0 +1,9 @@
+@mixin hover {
+  @media (hover: hover) {
+    &:hover{
+      @content;
+      transition: 0.3s;
+    }
+  }
+}
+  

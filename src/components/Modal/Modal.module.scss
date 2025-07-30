@@ -1,0 +1,214 @@
+@import '../../styles/mixin/mixin';
+
+.modal{  
+    &_open{
+        background-color: cl(cl-gray-bg);
+        color: cl(cl-text);
+        padding: 1rem;
+        border-radius: 15px;
+        font-weight: 700;
+        margin: 1rem;
+    }  
+    &_overlay{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: cl(cl-overlay);
+        z-index: 4;    
+    }
+
+    &_wrapper{
+        background-color: cl(cl-base);
+        border-radius: 5px;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 5;
+        overscroll-behavior-y: contain;
+        width: 90%;
+
+        &.s{
+            max-width: 375px;
+
+            .modal_contents{
+                display: grid;
+                grid-template-columns: repeat(1,1fr);
+                align-items: center;
+                overflow-y: auto;
+                max-height: 550px;
+                height: 70vh;
+                height: 70svh;
+                padding: 1rem;
+            }
+        }
+
+        &.m{
+            max-width: 690px;
+        }
+
+        &.x{
+            max-width: 960px;
+        }
+
+        &.max{
+            max-width: 1200px;
+        }
+
+        @include md {
+            max-width: 690px;
+        }
+
+        @include xl {
+            max-width: 960px;
+        }
+    }
+
+    &_contents{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        align-items: center;
+        overflow-y: auto;
+        max-height: 550px;
+        height: 70vh;
+        height: 70svh;
+        padding: 1rem;
+
+        @include md {
+            grid-template-columns: repeat(2,1fr);
+            padding: 1.5rem;
+            gap: 1.5rem;
+            height: inherit;
+            max-height: inherit;
+        }
+
+    }
+
+    &_image{
+        img{
+            aspect-ratio: 3/2;
+            width: 100%;
+            @include md {
+                height: 100%;
+            }
+    
+        }
+    }
+
+    &_text{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        h3{
+            margin-top: 1rem;
+        }
+
+        p{
+            font-size: 14px;
+        }
+
+        .skill{
+            display: grid;
+            grid-template-columns: repeat(1,1fr);
+            gap: 0.5rem;
+
+            div{
+                h3{
+                    font-size: 16px;
+                }
+            }
+        }
+
+        a{
+            border-radius: 50px;
+            padding: 0.5rem;
+            width: 50%;
+            max-width: 160px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5647058824);
+        }
+
+        .disabled{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            a{
+                background-color: cl(cl-gray-bg-dark);
+                color: cl(cl-base);
+                pointer-events: none;
+                opacity: 0.5;
+            }
+        }
+
+        .link{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            a{
+                background-color: cl(cl-portfolio-primary-dark);
+                border: 1px solid cl(cl-portfolio-primary-dark);
+                color: cl(cl-base);
+
+                &::after{
+                    content: '';
+                    mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/link_icon.svg) no-repeat center center / contain;
+                    -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/link_icon.svg) no-repeat center center / contain;
+                    background: cl(cl-base);
+                    display: inline-block;
+                    width: 12px;
+                    height: 12px;
+                    margin-left: 0.25rem;
+                }
+
+                @include hover{
+                    color: cl(cl-portfolio-primary-dark);
+                    background-color: cl(cl-base);
+
+                    &::after{
+                        background: cl(cl-portfolio-primary-dark);
+                    }
+                }
+            }
+        }
+
+    }
+
+    &_close{
+        position: absolute;
+        top: -3.5%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 20;
+        background-color: cl(cl-portfolio-primary-dark);
+        border-radius: 5px;
+        padding: 0.5rem;
+
+        @include md {
+            top: -5%;
+        }
+
+        button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+            &::before{
+                content: '';
+                mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/close_icon.svg) no-repeat center center / contain;
+                -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/close_icon.svg) no-repeat center center / contain;
+                background: cl(cl-base);
+                display: inline-block;
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+
+}

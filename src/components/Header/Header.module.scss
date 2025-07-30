@@ -1,0 +1,178 @@
+@import '../../styles/mixin/mixin';
+
+.header{
+    padding: 0.5rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    &.portfolio{
+        border-bottom: 3px solid cl(cl-portfolio-primary-light);
+        background-color: cl(cl-portfolio-primary);
+    }
+
+    &.blog{
+        border-bottom: 3px solid cl(cl-blog-primary-light);
+        background-color: cl(cl-blog-primary-dark);
+    }
+
+    &.glassmorphism{
+        backdrop-filter: blur(20px);
+        background-color: hsla(0, 0%, 100%, .75);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+
+        .logo{
+            img{
+                
+            }
+        }
+
+        .menu{
+            .link{
+                a{
+                    color: cl(cl-portfolio-primary);
+                    &::before{
+                        background: cl(cl-portfolio-primary);
+                    }
+                }
+            }
+
+            &_item{
+                a{
+                    color: cl(cl-blog-primary-dark);
+                }
+            }
+
+        }
+
+    }
+
+    @include md {
+        height: 74px;
+    }
+
+    .wrapper{
+        display: flex;
+        justify-content: space-between;    
+        width: 100%;
+        margin: 0 auto; 
+
+        @include md {
+            max-width: 652.8px;
+        }
+    
+        @include lg {
+            max-width: 843.2px;
+        }
+    
+        @include xl {
+            max-width: 1020px;
+        }
+    
+        @include xxl {
+            max-width: 1190px;
+        }    
+    }
+
+    .logo{
+        display: flex;
+        align-items: center;
+
+        a{
+            opacity: 1;
+
+            @include hover {
+                opacity: 0.5;
+            }
+
+            img{
+                width: 100%;
+                min-height: 42px;
+                max-width: 120px;
+            }
+        }
+    }
+
+    .menu{
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        @include md {
+            gap: 1rem;
+            align-items: flex-end;
+        }
+
+        .link{
+
+            a{
+                font-size: 12px;
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+                color: cl(cl-base);
+                cursor: pointer;
+                line-height: 1;
+                
+                &:before{
+                    content: '';
+                    background: cl(cl-base);
+                    display: inline-block;
+                    width: 25px;
+                    height: 20px;
+                }
+
+                @include hover{
+                    color: cl(cl-portfolio-primary);
+
+                    &::before{
+                        background: cl(cl-portfolio-primary);
+                    }
+                }
+            }
+        }
+
+        .work{
+            a{
+                &::before{
+                    mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/work_icon.svg) no-repeat center center / contain;
+                    -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/work_icon.svg) no-repeat center center / contain;
+                }    
+            }
+        }
+
+        .about{
+            a{
+                &::before{
+                    mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/about_icon.svg) no-repeat center center / contain;
+                    -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/about_icon.svg) no-repeat center center / contain;
+                }    
+            }
+        }
+
+        .skill{
+            a{
+                &::before{
+                    mask: url(ahttps://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/skill_icon.svg) no-repeat center center / contain;
+                    -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/skill_icon.svg) no-repeat center center / contain;
+                }    
+            }
+        }
+
+        .news{
+            a{
+                &::before{
+                    mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/news_icon.svg) no-repeat center center / contain;
+                    -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/news_icon.svg) no-repeat center center / contain;
+                }    
+            }
+        }
+
+        &_item{
+            a{
+                color: cl(cl-base);
+            }
+        }
+    }
+}

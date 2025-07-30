@@ -1,0 +1,92 @@
+@import '../../styles/mixin/mixin';
+
+.footer{
+    width: 100%;
+    .scrollTop{
+        border-top: 2px solid cl(cl-base-border);
+        border-bottom: 2px solid cl(cl-base-border);
+        padding: 2rem 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        a{
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+            @include hover{
+                color: cl(cl-portfolio-primary-dark);
+                background-color: cl(cl-base);
+            }
+        }
+
+    }
+
+    .myContents{
+        padding: 2rem 0;
+        background-color: cl(cl-base);
+
+        &.blog{
+            background-color: cl(cl-gray-bg);
+        }
+
+        .title{
+            margin: 1rem 0 0.5rem;
+            p{
+                text-align: center;
+                font-weight: 700;
+            }
+        }
+
+        ul{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 2rem;
+
+            @include md {
+                flex-direction: row;
+                gap: 3rem;
+            }
+
+            li{
+                a{
+                    @include hover{
+                        opacity: 0.7;
+                    }
+        
+                    .image{
+                        margin-bottom: 0.5rem;
+                        img{
+                            width: 100%;
+                            height: auto;
+                            max-width: 220px;
+                        }
+                    }
+
+                    .text{
+                        p{
+                            font-size: 10px;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+
+    .copyRight{
+        background-color: cl(cl-portfolio-primary);
+        padding: 1rem;
+        p{
+            text-align: end;
+            color: cl(cl-base);
+            font-size: 12px;
+        }
+
+        &.blog{
+            background-color: cl(cl-blog-primary-dark);
+        }
+    }
+
+}

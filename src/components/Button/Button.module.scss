@@ -1,0 +1,79 @@
+@import '../../styles/mixin/mixin';
+
+    button {
+        &.common {
+            color: cl(cl-base);
+            border-radius: 50px;
+            padding: 0.5rem;
+            width: 50%;
+            max-width: 160px;
+        }
+
+        &.portfolio {
+            background-color: cl(cl-portfolio-primary-dark);
+            border: 1px solid cl(cl-portfolio-primary-dark);
+
+            @include hover{
+                color: cl(cl-portfolio-primary-dark);
+                background-color: cl(cl-base);
+
+                &::after{
+                    background: cl(cl-portfolio-primary-dark);
+                }
+            }
+        }
+
+        &.blog {
+            background-color: cl(cl-blog-primary-dark);
+            border: 1px solid cl(cl-blog-primary-dark);
+
+            @include hover{
+                color: cl(cl-blog-primary-dark);
+                background-color: cl(cl-base);
+
+                &::after{
+                    background: cl(cl-blog-primary-dark);
+                }
+            }
+        }
+
+        &.storybook {
+            background-color: cl(cl-sb-primary-dark);
+            border: 1px solid cl(cl-sb-primary-dark);
+
+                        
+            @include hover{
+                color: cl(cl-sb-primary-dark);
+                background-color: cl(cl-base);
+
+                &::after{
+                    background: cl(cl-sb-primary-dark);
+                }
+            }
+        }
+
+        &.icon{
+            &::after{
+                content: '';
+                mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/link_icon.svg) no-repeat center center / contain;
+                -webkit-mask: url(https://raw.githubusercontent.com/zatty-5118/portfolio/f3161b05abdb8b5819f3501b7c9c263a2cfeaa81/public/images/other/icon/link_icon.svg) no-repeat center center / contain;
+                background: cl(cl-base);
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin-left: 0.25rem;
+            }
+        }
+
+        &.boxShadow {
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5647058824);
+        }
+
+        &.disabled {
+            background-color: cl(cl-gray-bg-dark);
+            color: cl(cl-base);
+            pointer-events: none;
+            opacity: 0.5;
+        }
+
+    }

@@ -1,0 +1,26 @@
+$colors: (
+  cl-text: #333333,
+  cl-base: #ffffff,
+  cl-base-bg: #f7f7f7,
+  cl-base-border: #f2f2f2,
+  cl-gray-bg: #f5f5f5,
+  cl-gray-bg-dark: #ccc,
+  cl-gray-text: #7f7f7f,
+  cl-portfolio-primary: #6699cc,
+  cl-portfolio-primary-light: #dde9f8,
+  cl-portfolio-primary-dark: #3d85cc,
+  cl-blog-primary: #c2d5cb,
+  cl-blog-primary-light: #e0eae4,
+  cl-blog-primary-dark: #8ab19e,
+  cl-brand-blog: #8ab19e,
+  cl-sb-primary: #d5c2c2,
+  cl-sb-primary-light: #eae0e0,
+  cl-sb-primary-dark: #B18A8B,
+  cl-star: #ffa500,
+  cl-overlay: #000000a1,
+  cl-shadow: #0000004d
+);
+
+@function cl($key) {
+  @return map-get($colors, $key);
+}
