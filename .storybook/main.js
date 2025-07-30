@@ -22,7 +22,7 @@ const config = {
   viteFinal: async (storybookConfig, { configType }) => {
     return mergeConfig(storybookConfig, {
       // アセットをすべて相対パスにする
-      base: '/storybook/',
+      // base: '/storybook/',
       build: {
         // まとめて assets/ に出力
         assetsDir: 'assets',
