@@ -1,5 +1,7 @@
 import styles from "./Footer.module.scss";
 import PropTypes from "prop-types";
+import footerPortfolioLogo from "/public/images/footer/footer_portfolio_logo.svg";
+import footerBlogLogo from "/public/images/footer/footer_blog_logo.svg";
 
 const Footer = ({variant="portfolio"}) => {
   return (
@@ -17,7 +19,7 @@ const Footer = ({variant="portfolio"}) => {
               <li>
                 <a href="https://zatty-5118.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
                   <div className={styles.image}>
-                    <img src="/images/footer/footer_portfolio_logo.svg" alt="zatty's Portfolio" />
+                    <img src={footerPortfolioLogo} alt="zatty's Portfolio" />
                   </div>
                   <div className={styles.text}>
                     <p>
@@ -31,7 +33,7 @@ const Footer = ({variant="portfolio"}) => {
               <li>
                 <a href="https://zatty-5118.github.io/blog/" target="_blank" rel="noopener noreferrer">
                   <div className={styles.image}>
-                    <img src="/images/footer/footer_blog_logo.svg" alt="zatty's Blog" />
+                    <img src={footerBlogLogo} alt="zatty's Blog" />
                   </div>
                   <div className={styles.text}>
                     <p>

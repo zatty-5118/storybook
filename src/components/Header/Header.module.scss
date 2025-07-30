@@ -21,12 +21,6 @@
         background-color: hsla(0, 0%, 100%, .75);
         box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
 
-        .logo{
-            img{
-                
-            }
-        }
-
         .menu{
             .link{
                 a{
@@ -124,11 +118,7 @@
                 }
 
                 @include hover{
-                    color: cl(cl-portfolio-primary);
-
-                    &::before{
-                        background: cl(cl-portfolio-primary);
-                    }
+                    opacity: 0.5;
                 }
             }
         }
@@ -172,6 +162,10 @@
         &_item{
             a{
                 color: cl(cl-base);
+
+                @include hover{
+                    opacity: 0.5;
+                }
             }
         }
     }
