@@ -1,0 +1,43 @@
+#storybook-docs,
+.sbdocs-wrapper,
+.sbdocs.sbdocs-content,
+.sbdocs-preview,
+.sb-show-main {
+  font-family: "Noto Sans JP", sans-serif !important;
+}
+
+div[role=combobox] {
+  box-shadow: #B18A8B 0px 0px 0px 1px inset;
+}
+div#storybook-panel-root #panel-tab-content span {
+  color: #ffffff !important;
+}
+div#storybook-panel-root #panel-tab-content label[aria-disabled] span {
+  color: #333333 !important;
+}
+
+button[aria-label="Create a new story"] {
+  display: none;
+  background: inherit;
+  box-shadow: #B18A8B 0px 0px 0px 1px inset;
+}
+button[aria-label="Create a new story"]:hover {
+  background: #d5c2c2;
+}
+
+.sidebar-item:hover, .sidebar-item:focus {
+  background: #d5c2c2 !important;
+  outline: none;
+}
+.sidebar-item:hover button, .sidebar-item:focus button {
+  box-shadow: #d5c2c2 0px 0px 5px 5px !important;
+  background: #d5c2c2;
+}
+.sidebar-item[data-selected=true][data-ref-id=storybook_internal][data-item-id=components-button--primary][data-nodetype=story]:hover, .sidebar-item[data-selected=true][data-ref-id=storybook_internal][data-item-id=components-button--primary][data-nodetype=story]:focus {
+  background: #d5c2c2 !important;
+}
+.sidebar-item[data-selected=true][data-ref-id=storybook_internal][data-item-id=components-button--primary][data-nodetype=story]:hover button, .sidebar-item[data-selected=true][data-ref-id=storybook_internal][data-item-id=components-button--primary][data-nodetype=story]:focus button {
+  box-shadow: #d5c2c2 0px 0px 5px 5px !important;
+  background: #d5c2c2;
+}
+/*# sourceMappingURL=custom-theme.css.map */
